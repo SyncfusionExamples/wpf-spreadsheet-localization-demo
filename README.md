@@ -1,37 +1,58 @@
 # WPF Spreadsheet localization demo
 
-This repository contains sample project which shows localization of Syncfusion WPF SfSpreadsheet.
+This repository contains sample project which shows localization of Syncfusion WPF SfSpreadsheet. 
 
-Localization is the process of customizing the application to culture-specific. This involves configuring the application for the specific languages. Culture is the combination of Language and the Location (e.g. En-US is the Culture for English spoken at United States; En-GB is the Culture for English spoken at Great Britain).
+Localization is the process of configuring the application to a specific language. SfSpreadsheet provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding resource file and setting the specific culture in the application.
 
-[WPF Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor) (SfSpreadsheet) allows you to set custom resource through Resx file. You can give the string values in resource file for a specific Culture and set the Culture in the application. The given string values will be set to the Grid which does not affect the Code Block of the Grid.
+## Prerequisites
 
-## Adding Localization to an Application
+Before running this project, ensure you have the following installed:
 
-The following are steps to implementation Localization support to an application:
+- **Visual Studio** 2019 or later
+- **.NET Framework** 4.6.2 or greater
+- **.NET Core** 8.0 or greater
 
-1. Create a WPF application and add spreadsheet control to it.
-2. Create a folder named Resources in the application.
-3. Create a resource file (Resx file) and name it as Syncfusion.Spreadsheet.WPF. .resx. Example: Syncfusion.Spreadsheet.WPF.ja.resx.
-4. Select the String option in the Resource file.
-5. Resource table will open. Enter the UI name in the Name column and the equivalent term you want in the Value column.
-6. Assign the CultureInfo to the application before the InitializeComponent() method is being called.
-    The following code illustrates localizing the application to the Japanese CultureInfo.
+## Technologies Used
 
-``` csharp
-public MainPage()
-{ 	
-    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ja-JP"); 
-		   
-    InitializeComponent();
-}
+- **WPF** (Windows Presentation Foundation) + **Syncfusion Spreadsheet**
+
+## Getting Started
+
+### 1. Clone the Repository
+
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/wpf-spreadsheet-localization-demo.git
+cd wpf-spreadsheet-localization-demo
 ```
-7. Add Supported Cultures to the Application
 
-The following are the steps to add Supported Cultures:
+### 2. Install Dependencies
 
-1. In the Solution Explorer, right-click application project and choose Unload Project from the Context Menu. The project will be unloaded.
-2. Right click the project again, and select the Edit .csproj option. Example: LocalizationSample WPF.csproj
-3. In the .csproj file, find the tags. Default the tags will be empty. So, add the required cultures. Use semicolon to separate if you want to add multiple culture. Example: en-GB;de;hi;es;it;Ja
-4. Save the project.
-5. Right click the .csproj and choose Reload .csproj. Project will be added with specific culture.
+Install the required Syncfusion WPF Spreadsheet packages as dependencies:
+
+```bash
+dotnet add package Syncfusion.SfSpreadsheet.WPF
+dotnet add package Syncfusion.SfSpreadsheetHelper.WPF
+```
+
+Alternatively, you can restore packages using:
+
+```bash
+dotnet restore
+```
+
+### 3. Run the Application
+
+Run the project and test the feature directly from the WPF app:
+
+```bash
+dotnet run
+```
+
+Or open the solution in Visual Studio and press `F5` to build and run the application.
+
+## Resources
+
+- https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/getting-started
+- https://help.syncfusion.com/document-processing/excel/spreadsheet/wpf/localization
