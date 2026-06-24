@@ -1,6 +1,6 @@
 # WPF Spreadsheet localization demo
 
-This repository contains sample project which shows localization of Syncfusion WPF SfSpreadsheet. 
+This repository contains sample project which shows localization of Syncfusion [WPF SfSpreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadsheet-editor). 
 
 Localization is the process of configuring the application to a specific language. SfSpreadsheet provides support to localize all the static text in a Ribbon and all dialogs to any desired language. Localization can be done by adding resource file and setting the specific culture in the application.
 
